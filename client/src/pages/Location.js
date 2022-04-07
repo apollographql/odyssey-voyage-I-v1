@@ -40,7 +40,7 @@ export default function Location() {
   });
   if (loading) return <Spinner />;
   if (error) return <Error error={error.message} />;
-  const {name, description, photo, reviewsForLocation, overallRating} = data?.location;
+  const {name, description, photo, reviewsForLocation: reviews, overallRating} = data?.location;
   return (
     <>
       {data && (
